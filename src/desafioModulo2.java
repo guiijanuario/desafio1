@@ -34,6 +34,13 @@ public class desafioModulo2 {
         int errou = 0;
         int pontuacao = 0;
 
+        String textoSistema = "O sistema gerou os seguintes números:";
+        String textoNumDig = "Você digitou os seguintes números:";
+        String textoAcerto1 = "Você acertou um total de ";
+        String textoAcerto2 = " números, parabéns!";
+        String textoErros1 = "Você errou um total de ";
+        String textoErros2 =" números, :(";
+        String textoTotal = "Você fez um total de pontos de: ";
         ArrayList<Integer> numerosInseridos = new ArrayList<>();
         ArrayList<Integer> numerosRandomizados = new ArrayList<>();
         ArrayList<Integer> numerosAcertados = new ArrayList<>();
@@ -75,11 +82,11 @@ public class desafioModulo2 {
                     }
                 }
 
-                System.out.println("O sistema gerou os seguintes números:" + numerosRandomizados);
-                System.out.println("Você digitou os seguintes números:" + numerosInseridos);
-                System.out.println("Você acertou um total de " + acertos + " números, parabéns!");
-                System.out.println("Você errou um total de " + errou + " números, :(");
-                System.out.println("Você fez um total de pontos de: " + pontuacao);
+                System.out.println(textoSistema + numerosRandomizados);
+                System.out.println(textoNumDig + numerosInseridos);
+                System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoErros1 + errou + textoErros2);
+                System.out.println(textoTotal + pontuacao);
 
                 break;
             case 2:
@@ -117,11 +124,11 @@ public class desafioModulo2 {
                     }
                 }
 
-                System.out.println("O sistema gerou os seguintes números:" + numerosRandomizados);
-                System.out.println("Você digitou os seguintes números:" + numerosInseridos);
-                System.out.println("Você acertou um total de " + acertos + " números, parabéns!");
-                System.out.println("Você errou um total de " + errou + " números, :(");
-                System.out.println("Você fez um total de pontos de: " + pontuacao);
+                System.out.println(textoSistema + numerosRandomizados);
+                System.out.println(textoNumDig + numerosInseridos);
+                System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoErros1 + errou + textoErros2);
+                System.out.println(textoTotal + pontuacao);
 
                 break;
             case 3:
@@ -159,11 +166,11 @@ public class desafioModulo2 {
                     }
                 }
 
-                System.out.println("O sistema gerou os seguintes números:" + numerosRandomizados);
-                System.out.println("Você digitou os seguintes números:" + numerosInseridos);
-                System.out.println("Você acertou um total de " + acertos + " números, parabéns!");
-                System.out.println("Você errou um total de " + errou + " números, :(");
-                System.out.println("Você fez um total de pontos de: " + pontuacao);
+                System.out.println(textoSistema + numerosRandomizados);
+                System.out.println(textoNumDig + numerosInseridos);
+                System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoErros1 + errou + textoErros2);
+                System.out.println(textoTotal + pontuacao);
 
                 break;
             case 4:
@@ -180,32 +187,28 @@ public class desafioModulo2 {
                 }
                 //for para fazer a comparação entre os dados inseridos e randomizados entre 2 listas diferentes.
                 for (int i = 0; i < numerosInseridos.size() && i <= numerosRandomizados.size(); i++){
-
                     //faz a comparação com o primeiro número que o usuário digitou com o primeiro número randomizado pelo sistema.
                     if (numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += acertouPontos;
                         acertos++;
                     }
-
                     if ((numerosInseridos.get(i) - 1) == numerosRandomizados.get(i) || (numerosInseridos.get(i) + 1) == numerosRandomizados.get(i)) {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
                         errou--;
                     }
-
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
                         numerosErrados.add(numerosInseridos.get(i));
                         errou++;
                     }
                 }
-
-                System.out.println("O sistema gerou os seguintes números:" + numerosRandomizados);
-                System.out.println("Você digitou os seguintes números:" + numerosInseridos);
-                System.out.println("Você acertou um total de " + acertos + " números, parabéns!");
-                System.out.println("Você errou um total de " + errou + " números, :(");
-                System.out.println("Você fez um total de pontos de: " + pontuacao);
+                System.out.println(textoSistema + numerosRandomizados);
+                System.out.println(textoNumDig + numerosInseridos);
+                System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoErros1 + errou + textoErros2);
+                System.out.println(textoTotal + pontuacao);
 
                 break;
             case 5:
@@ -243,20 +246,16 @@ public class desafioModulo2 {
                     }
                 }
 
-                System.out.println("O sistema gerou os seguintes números:" + numerosRandomizados);
-                System.out.println("Você digitou os seguintes números:" + numerosInseridos);
-                System.out.println("Você acertou um total de " + acertos + " números, parabéns!");
-                System.out.println("Você errou um total de " + errou + " números, :(");
-                System.out.println("Você fez um total de pontos de: " + pontuacao);
+                System.out.println(textoSistema + numerosRandomizados);
+                System.out.println(textoNumDig + numerosInseridos);
+                System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoErros1 + errou + textoErros2);
+                System.out.println(textoTotal + pontuacao);
                 break;
 
             default:
 
                 break;
         }
-
-
-
-
     }
 }
