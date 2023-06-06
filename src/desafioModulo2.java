@@ -60,20 +60,18 @@ public class desafioModulo2 {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += acertouPontos;
                         acertos++;
-                        System.out.println("Passou aqui no primeiro IF");
                     }
 
                     if ((numerosInseridos.get(i) - 1) == numerosRandomizados.get(i) || (numerosInseridos.get(i) + 1) == numerosRandomizados.get(i)) {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
-                        System.out.println("Passou aqui no segundo IF");
+                        errou--;
                     }
 
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
                         numerosErrados.add(numerosInseridos.get(i));
                         errou++;
-                        System.out.println("Passou aqui no 3ª IF");
                     }
                 }
 
@@ -104,20 +102,18 @@ public class desafioModulo2 {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += acertouPontos;
                         acertos++;
-                        System.out.println("Passou aqui no primeiro IF");
                     }
 
                     if ((numerosInseridos.get(i) - 1) == numerosRandomizados.get(i) || (numerosInseridos.get(i) + 1) == numerosRandomizados.get(i)) {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
-                        System.out.println("Passou aqui no segundo IF");
+                        errou--;
                     }
 
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
                         numerosErrados.add(numerosInseridos.get(i));
                         errou++;
-                        System.out.println("Passou aqui no 3ª IF");
                     }
                 }
 
@@ -154,6 +150,7 @@ public class desafioModulo2 {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
+                        errou--;
                     }
 
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
@@ -195,6 +192,7 @@ public class desafioModulo2 {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
+                        errou--;
                     }
 
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
@@ -236,6 +234,7 @@ public class desafioModulo2 {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
                         acertos++;
+                        errou--;
                     }
 
                     if (!numerosInseridos.get(i).equals(numerosRandomizados.get(i))){
