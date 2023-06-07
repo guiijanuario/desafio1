@@ -21,7 +21,6 @@ public class DesafioModulo2 {
         int max = 1000;
         int min = 1;
         int range = max - min + 1;
-        double random = (int)(Math.random() * range - 1);
 
         //regras do jogo
         int acertouPontos = 10;
