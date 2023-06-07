@@ -1,11 +1,9 @@
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class desafioModulo2 {
+public class DesafioModulo2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        DecimalFormat formatador = new DecimalFormat("0");
 
         System.out.println("[------------------------------------- Bem vindes ------------------------------------]");
         System.out.println("Você deve escolher um número inteiro se você acertar o número recebe 10 pontos se você");
@@ -31,6 +29,7 @@ public class desafioModulo2 {
 
         // contador de acertos e erros;
         int acertos = 0;
+        int chegouPerto = 0;
         int errou = 0;
         int pontuacao = 0;
 
@@ -38,6 +37,7 @@ public class desafioModulo2 {
         String textoNumDig = "Você digitou os seguintes números:";
         String textoAcerto1 = "Você acertou um total de ";
         String textoAcerto2 = " números, parabéns!";
+        String textoPassouPerto1 = "Você passou perto um total de ";
         String textoErros1 = "Você errou um total de ";
         String textoErros2 =" números, :(";
         String textoTotal = "Você fez um total de pontos de: ";
@@ -72,7 +72,7 @@ public class desafioModulo2 {
                     if ((numerosInseridos.get(i) - 1) == numerosRandomizados.get(i) || (numerosInseridos.get(i) + 1) == numerosRandomizados.get(i)) {
                         numerosAcertados.add(numerosInseridos.get(i));
                         pontuacao += numProximoPontos;
-                        acertos++;
+                        chegouPerto++;
                         errou--;
                     }
 
@@ -85,6 +85,7 @@ public class desafioModulo2 {
                 System.out.println(textoSistema + numerosRandomizados);
                 System.out.println(textoNumDig + numerosInseridos);
                 System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoPassouPerto1 + chegouPerto + textoAcerto2);
                 System.out.println(textoErros1 + errou + textoErros2);
                 System.out.println(textoTotal + pontuacao);
 
@@ -127,6 +128,7 @@ public class desafioModulo2 {
                 System.out.println(textoSistema + numerosRandomizados);
                 System.out.println(textoNumDig + numerosInseridos);
                 System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoPassouPerto1 + chegouPerto + textoAcerto2);
                 System.out.println(textoErros1 + errou + textoErros2);
                 System.out.println(textoTotal + pontuacao);
 
@@ -169,6 +171,7 @@ public class desafioModulo2 {
                 System.out.println(textoSistema + numerosRandomizados);
                 System.out.println(textoNumDig + numerosInseridos);
                 System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoPassouPerto1 + chegouPerto + textoAcerto2);
                 System.out.println(textoErros1 + errou + textoErros2);
                 System.out.println(textoTotal + pontuacao);
 
@@ -207,6 +210,7 @@ public class desafioModulo2 {
                 System.out.println(textoSistema + numerosRandomizados);
                 System.out.println(textoNumDig + numerosInseridos);
                 System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoPassouPerto1 + chegouPerto + textoAcerto2);
                 System.out.println(textoErros1 + errou + textoErros2);
                 System.out.println(textoTotal + pontuacao);
 
@@ -249,12 +253,13 @@ public class desafioModulo2 {
                 System.out.println(textoSistema + numerosRandomizados);
                 System.out.println(textoNumDig + numerosInseridos);
                 System.out.println(textoAcerto1 + acertos + textoAcerto2);
+                System.out.println(textoPassouPerto1 + chegouPerto + textoAcerto2);
                 System.out.println(textoErros1 + errou + textoErros2);
                 System.out.println(textoTotal + pontuacao);
                 break;
 
             default:
-
+                System.out.println("Opção inválida, por favor digite uma opção válida!");
                 break;
         }
     }
